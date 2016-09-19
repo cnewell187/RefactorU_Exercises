@@ -1,1 +1,31 @@
 /* ADD YOUR STYLES HERE */
+th, td {
+    text-align: left;
+    padding: 10px 50px;
+    border-bottom: .5px solid #ddd;
+    border-top: .5px solid #ddd;
+}
+
+td{
+    font-weight: 400;
+    font-family: serif;
+}
+
+.bigBold {
+    font-size: 30px;
+    font-weight:900;
+    font-family: Impact;
+}
+
+.dull{
+    color: #9f9f9f;
+    font-family:Tahoma;
+}
+
+.squishyT{
+     text-align: center;
+    padding: 10px 10px;
+    border-bottom: .5px solid #ddd;
+    border-top: .5px solid #ddd;
+  
+}
