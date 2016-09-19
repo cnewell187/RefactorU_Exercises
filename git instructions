@@ -3,6 +3,14 @@ New Repo:
 2) cd to root dir of repo
 3) git init
 4) git remote add origin url
+
+Steps TO Push Work
 5) git add -A (adds all files in the dir)
 6) git commit -m
 7)git push -u origin master
+
+** git remote -v (tells you where you are pushing to)
+
+Steps to Clone Repos:
+1) copy URL
+
