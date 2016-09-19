@@ -1,0 +1,21 @@
+.header {
+    height: 800px;
+    background:url(https://c2.staticflickr.com/2/1492/24075563634_a92871781f_b.jpg);
+    background-size:cover;
+    color: #fff;
+    text-align: center;
+
+    
+}
+
+.container{
+    margin: 0 100px;
+    padding: 16px 40px;
+    position: relative;
+    top: 200px;
+    background-color:black;
+}
+
+.header > span{
+    color:red;
+}
