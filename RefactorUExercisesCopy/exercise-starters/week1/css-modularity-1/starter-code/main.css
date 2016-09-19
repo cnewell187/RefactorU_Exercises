@@ -29,3 +29,31 @@ td{
     border-top: .5px solid #ddd;
   
 }
+
+.chart{
+    background-color: dodgerblue;
+    border-radius: 0px 7px 7px 0px;
+    text-align: left;
+    color: #FFF;
+    font-family: Impact;
+    }
+
+.barTable{
+    border-bottom: hidden;
+    border-top: hidden;
+    text-align: left;
+    width: 600px;
+    padding: 1px 0;
+  
+}
+
+.barTableHead{
+    border-bottom: hidden;
+    border-top: hidden;
+    text-align: right;
+    padding-right: 5px;
+    padding-bottom: 0;
+    padding-top: 0;
+    padding-left: 0;
+}
+
