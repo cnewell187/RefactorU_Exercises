@@ -57,3 +57,39 @@ td{
     padding-left: 0;
 }
 
+.lightBack{
+    background-color: #696969;
+    padding: 80px;
+}
+
+.lightBox{
+    background-color: #fff;
+    padding: 20px;
+    border-radius:10px;
+}
+
+.light-btn{
+    text-decoration: none;
+    background-color:#ee0f69;
+    color:#FFF;
+    padding-left: 20px;
+    padding-right:20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    font-weight: 900;
+ 
+}
+
+.btn-space{
+    text-align: right;
+}
+
+.LFloat{
+    float:left;
+     margin-right: 1.5em;
+}
+
+.RFloat{
+    overflow: hidden;
+}
