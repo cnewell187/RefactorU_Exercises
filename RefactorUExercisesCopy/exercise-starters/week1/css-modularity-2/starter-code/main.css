@@ -1,1 +1,211 @@
-/* ADD YOUR STYLES HERE */
+.imageCenter{
+    
+    display: flex;
+    justify-content:center;
+    width: 100%;
+    
+}
+
+.element{
+    padding:1em;
+    
+}
+
+.element2{
+    padding:1em;
+    display: inline-block;
+    vertical-align: text-top;
+}
+
+.imageCenter2{
+    justify-content:center;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
+
+
+.vertElement{
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.madVerts{
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.nav{
+    font-size: 0px;
+}
+
+.nav li{
+    display:inline;
+    font-size: 16px;
+    }
+
+.bigButton{
+    text-decoration: none;
+    background-color:#ffa07a;
+    background-size: cover;
+    color:#FFF;
+    font-weight: 900;
+    padding: 10px 40px;
+    display: inline-block;
+    border-radius: 15px;
+    font-size: 24px;
+}
+
+.mediumButton{
+    text-decoration: none;
+    background-color:#ffa07a;
+    background-size: cover;
+    color:#FFF;
+    font-weight: 900;
+    padding:5px 25px;
+    display: inline-block;
+    border-radius: 10px;
+    font-size: 18px;
+    border: none;
+}
+
+.littleButton{
+    text-decoration: none;
+    background-color:#ffa07a;
+    background-size: cover;
+    color:#FFF;
+    font-weight: 900;
+    padding: 4px 8px;
+    display: inline-block;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.navBar li{
+    display: inline;
+    font-size: 16px;
+}
+   
+   
+.navBar{
+    font-size: 0px;
+    background-color:#ffa07a;
+    border-radius: 10px;
+    text-align:center;
+}
+
+.mediumButtonNav{
+    text-decoration: none;
+    background-size: cover;
+    color:#FFF;
+    font-weight: 900;
+    padding:5px 25px;
+    display: inline-block;
+    font-size: 18px;
+    border: none;
+}
+
+.unlist{
+    -webkit-padding-start:0;
+    -webkit-margin-before:0;
+    -webkit-margin-after:0;
+}
+
+.navPag li{
+    display: inline;
+    font-size: 16px;
+}
+
+.PinkU {
+    color:#b6006e;
+    font-weight: 900;
+    opacity: .75;
+    margin-right: 5px;
+    font-family: Tahoma;
+}
+
+.PinkMid {
+    color:#b6006e;
+    font-weight: 900;
+    opacity: .3;
+    margin-right: 5px;
+    font-family: Tahoma;
+}
+.PinkWord {
+    text-decoration: none;
+    color:#b6006e;
+    font-weight: 900;
+    opacity: .75;
+    margin-right: 5px;
+    font-family: Tahoma;
+}
+
+.overFlow {
+    overflow: hidden;
+    
+}
+
+.Lfloat{
+    float:left;
+    padding: 0 10px;
+}
+
+.leftAlign{
+    padding-top: 1px;
+}
+
+.Lfloat2{
+    clear:both;
+    float:left;
+    padding: 10px;
+}
+
+.navTab{
+    display: inline;
+    font-size: 16px;
+    
+}
+
+.navTab1{
+    display: inline;
+    font-size: 16px;
+    padding-right:10px;
+
+    
+ 
+}
+.listTab{
+    margin-top: 10px;
+    
+    
+}
+
+.linkZ{
+    text-decoration: none;
+    border: solid blue 1px;
+    border-bottom:none;
+    border-radius: 5px 5px 0 0;
+    padding: 5px 5px 4px 5px;
+    height: 10px;
+    background-color: #ffffff;
+    color: #000b5c;
+}
+
+.linkA{
+    text-decoration: none;
+    border: solid blue 1px;
+    border-bottom:none;
+    border-radius: 5px 5px 0 0;
+    padding: 5px 5px 4px 5px;
+    height: 10px;
+    background-color: #ffffff;
+    color:#000b5c;
+    font-weight: 900;
+}
+
+.theBox{
+    border: solid black 1px;
+    margin-top: 3px;
+    padding: 10px;
+    border-radius: 10px;
+}
