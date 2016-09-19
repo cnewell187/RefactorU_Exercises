@@ -1,0 +1,8 @@
+New Repo:
+1) Create repo in github, copy link
+2) cd to root dir of repo
+3) git init
+4) git remote add origin url
+5) git add -A (adds all files in the dir)
+6) git commit -m
+7)git push -u origin master
