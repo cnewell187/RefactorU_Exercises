@@ -8,16 +8,57 @@
 		-webkit-backface-visibility
 */
 .front {
-	transform: perspective(600px) rotateY(45deg);
 	width:100%;
 	height:100%;
 	display:block;
-	position: absolute;
+	position: relative;
+	z-index: 1;
+   
+    
+	
 }
 
+.back{
+    background-color:#8d8d8d;
+	position:absolute;
+	top: 0;
+	
+}
 
 
 .portfolio-item{
 	position:relative;
+	perspective: 800px;
+	
 }
+
+
+.portfolio-item:hover .front{
+	transform: rotateY(180deg);
+	backface-visibility: hidden;
+	transition-duration: 2s;
+	
+}
+
+
+.portfolio-item:hover .back {
+	transform: rotateY(180deg);
+	transition-duration: 2s;
+	
+}
+
+.portfolio-item:hover .back *{
+	transform: rotateY(180deg);
+	transition-duration: 2s;
+	
+}
+
+
+
+
+
+
+
+
+
 
