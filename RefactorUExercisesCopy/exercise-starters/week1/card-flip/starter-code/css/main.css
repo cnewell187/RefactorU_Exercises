@@ -7,3 +7,17 @@
 		-webkit-transform-style
 		-webkit-backface-visibility
 */
+.front {
+	transform: perspective(600px) rotateY(45deg);
+	width:100%;
+	height:100%;
+	display:block;
+	position: absolute;
+}
+
+
+
+.portfolio-item{
+	position:relative;
+}
+
