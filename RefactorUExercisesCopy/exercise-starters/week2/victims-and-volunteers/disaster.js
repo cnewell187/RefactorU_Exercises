@@ -50,8 +50,3 @@ alert("The number of people in need is: " + totalVictims+
 
 //person object
 
-function newPerson(name, number, address){
-    this.name = name;
-    this.number = number;
-    this.address = address;
-}

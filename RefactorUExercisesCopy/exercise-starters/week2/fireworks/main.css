@@ -1,0 +1,47 @@
+html, body {
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  font-family: Tahoma, sans-serif;
+  background: url(http://www.aniwallpaper.com/wp-content/uploads/2015/12/Space-Earth-View-From-Moon-Wallpaper.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+.centered{
+    margin:auto;
+    position: absolute;
+    top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width:200px;
+	height: 90px;
+	background-color: gray;
+	border: solid gray 3px;
+	border-radius: 10px;
+}
+
+.rocketship{
+    background-color:purple;
+    margin:auto;
+    position: absolute;
+    top:1000;
+	bottom: 20px;
+	left: 0;
+	right: 0;
+}
+
+.launchPad{
+    margin:auto;
+    position: absolute;
+    top:1000;
+	bottom: 0;
+	left: 0;
+	right: 0;
+    height: 20px;
+    width: 500px;
+    background-color:black;
+    border: solid purple;
+}

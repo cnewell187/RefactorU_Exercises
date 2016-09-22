@@ -45,3 +45,9 @@ alert("The number of people in need is: " + totalVictims+
 "\nThe number of volunteers is: " + totalVolunteers +
 "\nHere is a list of the volunteers: \n" + volunteerNames.join("\n")
 );
+
+function newPerson(name, number, address){
+    this.name = name;
+    this.number = number;
+    this.address = address;
+}
