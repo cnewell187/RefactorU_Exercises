@@ -1,3 +1,4 @@
+
 function getSeconds(string){
     return string.substring(3);
 }
