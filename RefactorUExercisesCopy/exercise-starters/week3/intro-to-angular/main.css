@@ -1,0 +1,13 @@
+body{
+  color:black;
+  text-align: center;
+}
+
+.btn{
+  margin:auto;
+  color:white;
+  background: black;
+  padding: 20px;
+  width: 200px;
+
+}
