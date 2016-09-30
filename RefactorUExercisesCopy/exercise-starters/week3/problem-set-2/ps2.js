@@ -50,4 +50,4 @@ function letterCount(str){
   }
 }
 
-console.log(letterCount("HapAyaAyy"))
+console.log(letterCount("HapAyaAyyy"))
