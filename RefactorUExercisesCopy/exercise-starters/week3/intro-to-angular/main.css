@@ -1,13 +1,42 @@
-body{
-  color:black;
-  text-align: center;
+body {
+    color: black;
+    text-align: center;
 }
 
-.btn{
-  margin:auto;
-  color:white;
-  background: black;
-  padding: 20px;
-  width: 300px;
+.btn {
+    margin: auto;
+    color: white;
+    background: black;
+    padding: 20px;
+    width: 300px;
+}
 
+#BIG_ASS_BUTTON {
+    background-color: black;
+    height: 600px;
+    width: 600px;
+    color: white;
+    margin: auto;
+    font-size: 50px;
+}
+
+#displayZ {
+    background: url(https://s3-us-west-1.amazonaws.com/cominsoon-tech/campaign-bg/earth-7251x4018-planet-space-10121.jpg);
+    height: 90px;
+    width: 90px;
+    background-position: center;
+    background-size: cover;
+    z-index: 1;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+#closeMe {
+    position: absolute;
+    top: 40%;
+    left: 45%;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
 }

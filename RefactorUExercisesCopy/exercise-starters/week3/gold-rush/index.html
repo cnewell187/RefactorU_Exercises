@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="MainApp">
+
+<head>
+    <title>GOLD RUSHING!</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="main.css" type="text/css" />
+</head>
+
+<body ng-controller="MainController as main">
+  <div class="pin">
+  </div>
+  <div class="wrapper">
+
+  <img class="map" ng-click="main.pushPin($event)" src="https://www.raremaps.com/maps/medium/21796.jpg">
+</div>
+<p id="demo">{{main.name}}</p>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+.map{
+  height: 100vh;
+  width: auto;
+  margin: 0 auto;
+  /*position:absolute;*/
+}
+.wrapper{
+  position: relative;
+}
+
+.pin{
+  height:20px;
+  width: 20px;
+  background-color: black;
+  z-index:1;
+  position: absolute;
+  top: 168px;
+  left: 255px;
+}

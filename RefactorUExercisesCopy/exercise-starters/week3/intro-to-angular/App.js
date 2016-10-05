@@ -1,19 +1,27 @@
 var app = angular.module("Intro", []);
 
-app.controller('MainController', ['$scope', function($scope) {
+app.controller('MainController', ['$scope', '$window', function($scope, $window) {
+$scope.h1="Hello";
+$scope.h1 = $scope.h1 + "!!!";
 
-  // $scope.displayHeader = function() {
-  //  var node = document.createElement("h1");
-  //  var textnode = document.createTextNode("BOOM");
-  //  node.appendChild(textnode);
-  //  document.getElementById("test1").appendChild(node);
-	// };
-  //
-  // $scope.myList = [
-  //   "item1",
-  //   "item2",
-  //   "item3",
-  // ];
+
+$scope.changeColor = function(){
+  $scope.mouseStyle = {color: "pink"};
+}
+
+$scope.changeColorBack = function(){
+  $scope.mouseStyle = {color: "black"};
+}
+
+$scope.confirm = function(event){
+
+      if($window.confirm('are you sure?')===false) {
+        console.log("HALEPL!")
+        event.preventDefault();
+        event.target.remove();
+
+      }
+}
 
 
 }]);
@@ -27,11 +35,3 @@ app.controller('SecondController', ['$scope', function($scope) {
 
 
 }]);
-
-// // app.controller('myCtrl',['$scope'] function($scope){
-// //   $scope.myList = {
-// //     "item1",
-// //     "item2",
-// //     "item3",
-// //   }
-// // }

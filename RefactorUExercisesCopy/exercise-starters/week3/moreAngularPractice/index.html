@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="LessonRepeat">
+
+<head>
+    <title>Ng-Repeat</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="main.css" type="text/css" />
+</head>
+
+<body ng-controller="mainController as main">
+
+    <h1> Repeat  {{greeting}}</h1>
+    <ul>
+      <li ng-repeat="monkey in main.monkeys">My name is {{monkey}}. I am monkey # {{$index}}!!</li>
+    </ul>
+
+    <ul>
+      <li ng-repeat="(name, monkeyBiz) in main.monkeyObj">{{name}} likes to {{monkeyBiz}}</li>
+    </ul>
+
+
+</body>
+
+
+
+</html>

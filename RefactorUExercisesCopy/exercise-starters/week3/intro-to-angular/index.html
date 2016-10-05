@@ -3,31 +3,48 @@
 
 <head>
     <title>Title</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
+
     <script src="App.js"></script>
     <link rel="stylesheet" href="main.css" type="text/css" />
 </head>
 
 <body>
 
+
     <div ng-controller="MainController">
         <button ng-click="show = !show">
-          <h1> Click Me First</h1>
+          <h1 ng-bind="h1"> Click Me First</h1>
         </button>
-
         <button ng-click="list = !list">
           <h1 > Click Me Second</h1>
         </button>
 
         <h1 ng-show="show"> Boom</h1>
         <ul ng-show="list" ng-controller="SecondController">
-            <li ng-repeat="item in myList" >{{item}}</li>
+            <li ng-repeat="item in myList">{{item}}</li>
         </ul>
+
+        <p ng-mouseenter="changeColor()" ng-style="mouseStyle" ng-mouseleave="changeColorBack()"> Mouseover me and I turn pink!!! </p>
+        <a id="testy" href="http://gmail.com" ng-click="confirm($event)"> Gmail </a>
+    </div>
     </div>
 
     </div>
-    <div id="test1">
+    <div>
+      <button ng-click="space = !space" id="BIG_ASS_BUTTON">
+      BIG ASS BUTTON
+    </button>
     </div>
+
+    <div id="displayZ" ng-show="space">
+      <button ng-click="space =!space" id="closeMe">
+        CLOSE ME!!!
+      </button>
+    </div>
+
+
 </body>
 
 
