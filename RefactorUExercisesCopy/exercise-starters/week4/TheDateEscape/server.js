@@ -9,11 +9,11 @@ app.use(express.static('public'));
 //var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 
-app.get('/index.htm', function(req, res) {
-    res.sendFile(__dirname + "/" + "index.htm");
-})
+
 app.use(bodyParser.json());
 
+
+//sends a TEXT!!!!
 function twilling(req) {
 
     // Load the twilio module
@@ -55,21 +55,10 @@ function twilling(req) {
 app.post('/process_post', function(req, res) {
 
     var delayTime = req.body.timeToSend - Date.now();
-    console.log(Date.now())
-    console.log(req.body.timeToSend)
-    console.log(delayTime)
 
-    var accountSid = 'AC67a93bf06deff43cde414d7d80f137f7';
-    var authToken = "a74e02558f703ea6cdede972ba0305e9";
-    var client = require('twilio')(accountSid, authToken);
 
-    client.outgoingCallerIds.create({
-        friendlyName: "Brent",
-        phoneNumber: "+18053676222"
-    }, function(err, callerId) {
-        console.log(callerId.sid);
-    });
-    //setTimeout(twilling, 10, req);
+    //runs the twilling function
+    setTimeout(twilling, 10, req);
     // Prepare output in JSON format
     response = {
         first_name: req.body.first_name,

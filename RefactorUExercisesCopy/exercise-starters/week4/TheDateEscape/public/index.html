@@ -2,30 +2,41 @@
 <html ng-app="dateEscape">
     <head>
         <meta charset="utf-8">
-        <title>Head Tag Template</title>
+        <title>The Date Escape</title>
         <!-- bootstrap.css/cdn -->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet" ></link>
-        <!-- style.css -->>
+        <!-- style.css -->
         <link rel="stylesheet" href="css/style.css">
         <!--jquery-->
-        <script   src="http://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+        <script  src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
         <!--bootstrap.js/cdn-->
         <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.js" ></script>
         <!--angular.js/cdn-->
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
         <!--app.js-->
         <script type="text/javascript" src="js/app.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body ng-controller="mainController as main">
         <nav>
             <h1>The Date Escape</h1>
         </nav>
+        <h3>Never get stuck in a <span>bad date</span> again!</h3>
         <main>
-            <h3>Tagline about app</h3>
-            <p>Description of the app  Description of the app  Description of the app  Description of the app  Description of the app  Description of the app  Description of the app  Description of the app  Description of the app  Description of the app  Description of the app  Description of the app  Description of the app  Description of the app  Description of the app  Description of the app  Description of the app  Description of the app  Description of the app  Description of the app  </p>
+            <div class="intro">
+
+            <p>
+                This application acts as your friend that offers to send you a text to offer you a way out of
+                bad date. Just add new alert for the time that works best for you.
+            </p>
+            <img src="bad-date.jpg">
+            </div>
+            <div>
+                <h3>Press the button below to add a new escape</h3>
+            </div>
             <!-- Button trigger modal -->
             <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-              Launch demo modal
+              Add New Escape
             </button>
 
             <!-- Modal -->
@@ -34,22 +45,34 @@
                 <div class="modal-content">
                   <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                    <h4 class="modal-title" id="myModalLabel">Enter Escape Information</h4>
                   </div>
                   <div class="modal-body">
                     <form action="">
                         <div class="form-group">
                            <label for="">Phone Number</label>
-                            <input ng-model="main.phone" type="tel" placeholder="Phone Nuumber" class="form-control">
+                            <input ng-model="main.phone" type="tel" placeholder="Phone Number" class="form-control">
                         </div>
                         <div class="form-group">
                             <label for="">When Would You Like Message To Be Sent?</label>
-                            <input ng-model="main.time" type="datetime-local" placeholder="" class="form-control">
+                            <input ng-model="main.time" type="datetime-local" class="form-control">
                         </div>
                         <div class="form-group">
+
                             <label for="">Text</label>
-                            <textarea  ng-model="main.message" type="text" placeholder="Write Your Message Here" class="form-control"></textarea>
-                        </div>
+                            <textarea ng-bind="main.presetMessage"  ng-model="main.message" type="text" placeholder="Write Your Message Here" class="form-control"></textarea>
+
+    <div class="dropdown">
+        <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Can't Think of Anything?
+        <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dLabel">
+            <li ng-click="main.preset1()" id="preset1"> Its a boy, congrats! Wife wants you at the hospital to meet your son. </li>
+            <li ng-click="main.preset2()" id="preset2"> This is father duke, bible study?</li>
+            <li ng-click="main.preset3()" id="preset3"> The dog shit all over the carpet </li>
+        </ul>
+    </div>
                     </form>
                   </div>
                   <div class="modal-footer">
