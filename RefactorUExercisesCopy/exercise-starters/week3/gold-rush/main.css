@@ -17,3 +17,14 @@
   top: 168px;
   left: 255px;
 }
+
+i {
+  postition: absolute;
+  z-index: 1;
+  font-size: 60px;
+  color: red;
+}
+
+.fa {
+  font-size: 40px;
+}

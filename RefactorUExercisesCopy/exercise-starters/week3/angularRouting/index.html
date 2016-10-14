@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="Route66">
+
+<head>
+    <title></title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.js" integrity="sha256-SAQ4JgNuN5J22HeNmrNXLyvqEh6gUoWsetBCX8EUnZQ=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <link rel='stylesheet' href='main.css' />
+</head>
+
+<body style="text-align:center" ng-controller="steeringWheel as wheel">
+  <div class="header">
+      <div class="container">
+          <ul class="nav">
+              <li><a href="/#/">Home</a></li>
+              <li><a href="/#/bigDino">Dino</a></li>
+              <li><a href="/#/roadZombie">Zombie Sign</a></li>
+
+          </ul>
+      </div>
+  </div>
+
+    
+
+       <ng-view>
+          <!--This is where html templates go -->
+
+        </ng-view>
+</body>
+
+</html>

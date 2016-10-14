@@ -1,0 +1,26 @@
+.container {
+
+  margin: 0 auto;
+  padding: 0 10px;
+  background-color: lightgrey;
+}
+
+.nav {
+  margin: 0;
+  padding: 20px 0;
+
+}
+
+.nav li {
+  color: #fff;
+  font-weight: 600;
+  font-size: 12px;
+  display: inline;
+  margin-right:20px;
+  margin-left:20px;
+
+}
+
+.li a{
+  color: #fff;
+}
