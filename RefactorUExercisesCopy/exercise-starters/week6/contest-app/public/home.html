@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html ng-app="contest">
+
+<head>
+    <title>Video Contest</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" integrity="sha256-fmMNkMcjSw3xcp9iuPnku/ryk9kaWgrEbfJfKmdZ45o=" crossorigin="anonymous" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js" integrity="sha256-Cr6N6zNN4bp0OwTQOZ6Z66M2r+2dpy/EwKMCyZ+SOMg=" crossorigin="anonymous"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-cookies.js"></script>
+
+    <!-- When you are creating multiple angular files, make sure you include the main module first -->
+    <script src="app.module.js"></script>
+    <script src="mainController.js"></script>
+    <!-- <link rel="stylesheet" href="main.css" type="text/css" /> -->
+</head>
+
+<body ng-controller="contestController as contest">
+
+    <h1> {{contest.greeting}}</h1>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  Make A Submission
+</button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <form ng-submit="contest.addSubmission()">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Submission</h4>
+                    </div>
+                    <div class="modal-body">
+                        Your Name<input class="form-control" ng-model="contest.newSubmission.name" placeholder="Your Name">
+                        Youtube URL<input class="form-control" ng-model="contest.newSubmission.url" placeholder="Youtube URL">
+                        Submission Title<input class="form-control" ng-model="contest.newSubmission.title" placeholder="Title of Submission">
+                        Video Description<input class="form-control" ng-model="contest.newSubmission.description" placeholder="Description">
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel Submission</button>
+                        <button type="submit" class="btn btn-primary">Add A Submission</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container-fluid">
+        <div ng-repeat=" submission in contest.submissions" class="col-sm-6 col-md-6">
+            <div class="row">
+                <h2>Contestant: {{submission.name}}</h2>
+            </div>
+
+            <div class="embed-responsive embed-responsive-16by9">
+                Video:<iframe class="embed-responsive-item" ng-src="{{submission.url|trustAsResourceUrl}}" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <div class="row"  style="height: 150px">
+                <div class="col-md-4">
+                    Title:{{submission.title}}
+                </div>
+                <div class="col-md-4">
+
+                </div>
+                <div class="col-md-4">
+                    <button ng-click="contest.voteSubmission(submission)" class="btn btn-success pull-right">Vote!</button>
+                    <p> Number of Votes: {{submission.votes}}
+                        <p>
+                </div>
+                <div class="col-md-6">
+                    Description:{{submission.description}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+
+
+</html>

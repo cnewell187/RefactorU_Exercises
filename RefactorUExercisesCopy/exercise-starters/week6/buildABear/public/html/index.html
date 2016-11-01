@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="bear" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Build A Bear</title>
+        <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="main.css">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular.js"></script>
+        <script src="/controllers/main.js"></script>
+    </head>
+    <body ng-controller="bearController as bCtrl">
+        <h1>{{bCtrl.greeting}}</h1>
+        <form ng-submit="bCtrl.addBear()">
+          <input type="text" ng-model="bCtrl.newBear.name" placeholder="Name">
+          <input type="text" ng-model="bCtrl.newBear.accessories" placeholder="Accessories">
+          <input type="text" ng-model="bCtrl.newBear.stuffedness" placeholder="Stuffedness">
+
+          <input type="submit">
+
+        </form>
+
+        <div>
+          <ul>
+            <li ng-repeat="bear in bCtrl.TheBearHouse">{{bear.name}}
+              <button ng-click ="bCtrl.removeBear(bear)" class="btn btn-danger"> X </button>
+            </li>
+          </ul>
+        </div>
+    </body>
+
+</html>

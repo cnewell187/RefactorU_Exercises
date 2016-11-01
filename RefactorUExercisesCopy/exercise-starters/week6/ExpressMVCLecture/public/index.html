@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="MVC" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>MVC</title>
+        <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="main.css">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular.js"></script>
+        <script src="/main.js"></script>
+    </head>
+    <body ng-controller="mvcController as mCtrl">
+      <h1>{{mCtrl.greeting}}</h1>
+      <form ng-submit="mCtrl.addUser()">
+        <input type ="text" ng-model="mCtrl.newUser.name" placeholder ="Name">
+        <input type ="text" ng-model="mCtrl.newUser.email" placeholder ="Email">
+        <input type ="text" ng-model="mCtrl.newUser.age" placeholder ="Age">
+        <input type = "submit">
+      </form>
+
+    </body>
+
+</html>

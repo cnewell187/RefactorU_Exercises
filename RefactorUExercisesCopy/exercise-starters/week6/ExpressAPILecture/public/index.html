@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="KANYE" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Kanye</title>
+        <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css">
+        <!-- <link rel="stylesheet" type="text/css" href="main.css"> -->
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular.js"></script>
+        <script src="/main.js"></script>
+    </head>
+    <body ng-controller="kanyeController as kanye">
+      <h1>{{kanye.greeting}}</h1>
+
+
+      <!-- <ul>
+        <li ng-repeat = "(key, value) in kanye.counter track by $index"> {{key}} : {{value}} </li>
+      </ul> -->
+
+      <ul>
+        <li ng-repeat = "item in kanye.arrayK | orderBy: '-count'"> {{item.word}} : {{item.count}} </li>
+      </ul>
+
+
+    </body>
+
+</html>
