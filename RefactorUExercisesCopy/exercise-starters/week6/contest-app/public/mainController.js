@@ -15,7 +15,7 @@ function contestCtrl($http, $sce, $cookies) {
 
     var contestCtrl = this;
     window.contestCtrl = contestCtrl;
-    contestCtrl.greeting = "Submit your favorite gaming video here!"
+    contestCtrl.greeting = "RefactorU Video Contest September 2016!"
     contestCtrl.newSubmission = {}
     contestCtrl.submissions = [];
     //contestCtrl.submissions = JSON.parse(window.localStorage.getItem("submissions")) || [];

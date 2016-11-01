@@ -83,18 +83,13 @@ module.exports = {
     newVote: function(req, res) {
         //console.log("Cookies :  ", req.cookies);
         if (req.cookies.voted) {
-          // Submission.findOneAndUpdate(req.body, {$inc: {votes: 1}}, {new: true}, function(err, doc) {
-          //     if (err) {
-          //         console.log("Something wrong when updating data!");
-          //     }
-          //     console.log(doc);
-          // });
 
-            res.send("Yo")
+
+            res.send("You already voted")
         } else {
 
             res.cookie('voted', true);
-            Submission.findOneAndUpdate({}, {$inc: {votes: 1}}, {new: true}, function(err, doc) {
+            Submission.findOneAndUpdate(req.body.name, {$inc: {votes: 1}}, {new: true}, function(err, doc) {
                 if (err) {
                     console.log("Something wrong when updating data!");
                 }

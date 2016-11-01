@@ -10,8 +10,8 @@ function ged($http) {
     ged.addToDoItem = function() {
         $http.post('/api/todo', ged.newToDoItem).then(function(response) {
             console.log("The response data:", response.data)
-						ged.newToDoItem = {};
-						ged.getToDo();
+            ged.newToDoItem = {};
+            ged.getToDo();
         })
 
     }
@@ -23,6 +23,6 @@ function ged($http) {
 
             })
     }
-		ged.getToDo();
+    ged.getToDo();
 
 }
