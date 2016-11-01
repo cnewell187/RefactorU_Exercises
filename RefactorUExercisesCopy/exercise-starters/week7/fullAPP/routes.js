@@ -2,7 +2,7 @@ var todo = require('./controllers/todo.js')
 
 module.exports = function(app) {
     app.get('/', function(req, res) {
-        res.send("Yo");
+        res.sendFile(__dirname + "/public/html/" + "home.html");
     });
     app.get('/api/todo', function(req, res) {
         todo.find(req.query, function(err, list) {
@@ -16,7 +16,7 @@ module.exports = function(app) {
     });
 
     app.post('/api/todo', function(req, res) {
-      console.log(req.body)
+      console.log("The req body",req.body)
         var newTodo = new todo(req.body);
         newTodo.save(function(err, doc) {
             if (err) {

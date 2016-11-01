@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html ng-app="ToDoApp">
 <head>
-	<title>MVC</title>
+	<title>GET ER DONE</title>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.js" type="text/javascript"></script>
 </head>
 <body ng-controller="getErDone as ged">
+	<img src="http://d5n0lf4gshqmd.cloudfront.net/img/096C00_89_p1/300/400/i.jpg">
 	<h3>{{ged.greeting}}</h3>
 
-	<form ng-submit="addToDoItem()">
-		<input ng-model="newToDoItem.info" placeholder="ToDoInfo">
+	<form ng-submit="ged.addToDoItem()">
+		<input ng-model="ged.newToDoItem.title" placeholder="ToDoInfo">
 
 		<input type="submit">
 	</form>
 
 	<div>
 		<ul>
-			<li ng-repeat="item in toDoList">
-				{{item.info}}
+			<li ng-repeat="item in ged.The_List">
+				{{item.title}}
 			</li>
 
 		</ul>
