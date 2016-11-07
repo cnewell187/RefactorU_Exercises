@@ -2,11 +2,14 @@ var wordPool = require("../models/wordPool.json")
 var request = require('request')
 // var transController = require('./transController.js')
 
-function buildQuiz(req, res){
+function buildQuiz(){
   var quiz = []
   for (var i =0 ; i < 10; i++){
-    quiz.push(wordPool[randIt])
+    console.log("the word pool" ,wordPool)
+    quiz.push(new quizItem(wordPool.words[1]))
   };
+  console.log(quiz)
+  return quiz;
 }
 
 function translateWord(baseWord){
@@ -24,7 +27,7 @@ function translateWord(baseWord){
       console.log("The Error",err)
     }
       translatedWord = JSON.parse(response.body).data.translations[0].translatedText
-      console.log("Translated Word in translateWord function: ", translatedWord)
+      //console.log("Translated Word in translateWord function: ", translatedWord)
       return translatedWord;
   });
 }
@@ -32,16 +35,12 @@ function translateWord(baseWord){
 function quizItem(baseWord){
   this.word = baseWord;
   this.tWord = translateWord(baseWord);
-
 }
 
-function testQuiz(){
-var testQuiz  = new quizItem("dog");
-console.log(testQuiz)
-}
 
 
 module.exports = {
  quizItem: quizItem,
- testQuiz: testQuiz,
+ buildQuiz: buildQuiz,
+ colletQuiz: collectQuiz
 }

@@ -7,7 +7,7 @@ var mongoose = require('mongoose');
 
 var quizController = require("./controllers/quizController.js")
 
-quizController.testQuiz()
+quizController.buildQuiz()
 
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost/lingo', function(err) {

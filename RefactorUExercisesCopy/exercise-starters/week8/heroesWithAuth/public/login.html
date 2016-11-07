@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="userLogin">
+
+<head>
+    <title>HEROES OF AJAX Login!</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.js" type="text/javascript"></script>
+    <script src="/js/login.js" type="text/javascript"></script>
+
+</head>
+
+<body ng-controller="userController as userCtrl">
+    <h3>LOGIN</h3>
+
+    <form ng-submit="userCtrl.submit()">
+        Email:<input ng-model="userCtrl.email" placeholder="Email">
+        Password:<input ng-model="userCtrl.password" type="password" placeholder="Password">
+        <button type="submit">Login</button>
+        <a href="#">Recover Password </a>
+    </form>
+
+
+</body>
+
+</html>

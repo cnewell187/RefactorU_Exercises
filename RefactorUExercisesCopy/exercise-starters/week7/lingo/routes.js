@@ -5,4 +5,5 @@ module.exports = function(app){
     res.send("Yo")
   })
   app.get('/api/translation/:word/:sourceLang/:targetLang', transController.translateWord)
+  app.post(/api)
 }
